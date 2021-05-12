@@ -1,0 +1,27 @@
+/* ========== FONT ========== */
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+
+/* ========== VARIABLES ========== */
+/* Colors */
+:root {
+    /* Primary */
+    --primary-color: hsl(185, 75%, 39%);
+    --secondary-color: hsl(229, 23%, 23%);
+    --text-gray-color: hsl(227, 10%, 46%);
+    
+    /* Secondary */
+    --line-gray-color: hsl(0, 0%, 59%);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 18px;
+}
