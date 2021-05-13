@@ -2,15 +2,12 @@
 @import url('https://fonts.google.com/specimen/Kumbh+Sans');
 
 
-/* ========== VARIABLES ========== */
 /* Colors */
 :root {
-    /* Primary */
     --primary-color: hsl(185, 75%, 39%);
     --secondary-color: hsl(229, 23%, 23%);
     --text-gray-color: hsl(227, 10%, 46%);
     
-    /* Secondary */
     --line-gray-color: hsl(0, 0%, 59%);
 }
 
@@ -22,6 +19,114 @@
 }
 
 body {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card container */
+.card {
+    width: 350px;
+    overflow: hidden;
+}
+
+.card-head {
+    width: 100%;
+    height: 140px;
+}
+
+.card-head-bg {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* Card bottom container */
+.card-bottom {
+    background-color: white;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.user .user-img {
+    border-radius: 50%;
+    border: 8px solid white;
+    margin-top: -50px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info h1 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.user-info p {
+    padding-left: 12px;
+    color: var(--text-gray-color);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.user .user-city {
+    color: var(--secondary-color);
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 15px 0px 30px;
+}
+
+/* Line */
+.line {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+
+}
+
+/* Social media */
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 20px;
+}
+
+.social h3 {
+    color: var(--secondary-color-color);
+    font-weight: 700;
+}
+
+.social small {
+    color: var(--secondary-color);
+    font-weight: 400;
+    display: block;
+    padding-top: 10px;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 1080px) {
+    .user-info h1 {
+        font-size: 1.3em;
+    }
+
+    .user-info p {
+        font-size: 1.4em;
+    }
+
+    .user .user-city {
+        font-size: 1.1em;
+    }
 }
