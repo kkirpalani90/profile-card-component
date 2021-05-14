@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ========== CSS ========== -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
 
     <title>Card Profile Component</title>
-</head>
-<body>
-
-    <div class="bg-top"></div>
-    <div class="bg-bottom"></div>
+  </head>
+  <body>
+    <div class="bg-shape top-circle"></div>
+    <div class="bg-shape bottom-circle"></div>
     <!-- Card -->
     <div class="card">
-        <!-- Card header -->
-        <div class="card-head">
-            <img src="./img/bg-pattern-card.svg" class="card-head-bg">
+      <!-- Card header -->
+      <div class="card-head">
+        <img src="./img/bg-pattern-card.svg" class="card-head-bg" />
+      </div>
+      <!-- Card bottom -->
+      <div class="card-bottom">
+        <div class="user">
+          <img src="./img/image-victor.jpg" alt="photo" class="user-img" />
+          <div class="user-info">
+            <h1>Victor Crest</h1>
+            <p>26</p>
+          </div>
+          <p class="user-city">London</p>
         </div>
-        <!-- Card bottom -->
-        <div class="card-bottom">
-            <div class="user">
-                <img src="./img/image-victor.jpg" alt="photo" class="user-img">
-                <div class="user-info">
-                    <h1>Victor Crest</h1>
-                    <p>26</p>
-                </div>
-                <p class="user-city">London</p>
-            </div>
-            <!-- Line border -->
-            <hr class="line">
-            <!-- Social media -->
-            <div class="social-media">
-                <div class="social">
-                    <h3>80K</h3>
-                    <small>Followers</small>
-                </div>
-                <div class="social">
-                    <h3>803K</h3>
-                    <small>Likes</small>
-                </div>
-                <div class="social">
-                    <h3>1.4K</h3>
-                    <small>Photos</small>
-                </div>
-            </div>
+        <!-- Line border -->
+        <hr class="line" />
+        <!-- Social media -->
+        <div class="social-media">
+          <div class="social">
+            <h3>80K</h3>
+            <small>Followers</small>
+          </div>
+          <div class="social">
+            <h3>803K</h3>
+            <small>Likes</small>
+          </div>
+          <div class="social">
+            <h3>1.4K</h3>
+            <small>Photos</small>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

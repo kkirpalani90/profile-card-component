@@ -1,133 +1,165 @@
 /* ========== FONT ========== */
-@import url('https://fonts.google.com/specimen/Kumbh+Sans');
-
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
 
 /* Colors */
 :root {
-    --primary-color: hsl(185, 75%, 39%);
-    --secondary-color: hsl(229, 23%, 23%);
-    --text-gray-color: hsl(227, 10%, 46%);
-    
-    --line-gray-color: hsl(0, 0%, 59%);
+  --primary-color: hsl(185, 75%, 39%);
+  --background-color: hsl(185, 100%, 39%);
+  --secondary-color: hsl(229, 23%, 23%);
+  --text-gray-color: hsl(227, 10%, 46%);
+
+  --line-gray-color: hsl(0, 0%, 59%);
 }
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--primary-color);
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 18px;
+  background: var(--primary-color);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* Hide the oveflow of the shapes */
+  overflow: hidden;
 }
 
+/* Create a 80rem x 80rem box then make it a circle with border-radius */
+.bg-shape {
+  position: absolute;
+  width: 80rem;
+  height: 80rem;
+  border-radius: 50%;
+}
+
+/* Position first circle in the top left corner and use a linear gradient to get the desired effect */
+.bg-shape.top-circle {
+  background: linear-gradient(
+    to left,
+    var(--background-color),
+    transparent 35%
+  );
+  transform: translate(-25%, -65%);
+  top: 0;
+  left: 0;
+}
+
+/* Position second circle in the bottom right corner and use a linear gradient to get the desired effect */
+.bg-shape.bottom-circle {
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    transparent 90%
+  );
+  transform: translate(25%, 65%);
+  bottom: 0;
+  right: 0;
+}
 
 /* Card container */
 .card {
-    width: 350px;
-    overflow: hidden;
+  width: 350px;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .card-head {
-    width: 100%;
-    height: 140px;
+  width: 100%;
+  height: 140px;
 }
 
 .card-head-bg {
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-
 
 /* Card bottom container */
 .card-bottom {
-    background-color: white;
-    text-align: center;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+  background-color: white;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .user .user-img {
-    border-radius: 50%;
-    border: 8px solid white;
-    margin-top: -50px;
+  border-radius: 50%;
+  border: 8px solid white;
+  margin-top: -50px;
 }
 
 .user-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-info h1 {
-    font-size: 1.8em;
-    color: var(--secondary-color);
-    font-weight: 700;
+  font-size: 1.8em;
+  color: var(--secondary-color);
+  font-weight: 700;
 }
 
 .user-info p {
-    padding-left: 12px;
-    color: var(--text-gray-color);
-    font-size: 1.5em;
-    font-weight: 400;
+  padding-left: 12px;
+  color: var(--text-gray-color);
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 .user .user-city {
-    color: var(--secondary-color);
-    font-size: 1.3em;
-    font-weight: 400;
-    margin: 15px 0px 30px;
+  color: var(--secondary-color);
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 15px 0px 30px;
 }
 
 /* Line */
 .line {
-    border: none;
-    height: 1px;
-    background-color: #ccc;
-
+  border: none;
+  height: 1px;
+  background-color: #ccc;
 }
 
 /* Social media */
 .social-media {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 25px;
 }
 
 .social h3 {
-    color: var(--secondary-color-color);
-    font-weight: 700;
+  color: var(--secondary-color-color);
+  font-weight: 700;
 }
 
 .social small {
-    color: var(--secondary-color);
-    font-weight: 400;
-    display: block;
-    padding-top: 10px;
+  color: var(--secondary-color);
+  font-weight: 400;
+  display: block;
+  padding-top: 10px;
 }
-
 
 /* Media Queries */
 @media screen and (min-width: 1080px) {
-    .user-info h1 {
-        font-size: 1.3em;
-    }
+  .user-info h1 {
+    font-size: 1.3em;
+  }
 
-    .user-info p {
-        font-size: 1.4em;
-    }
+  .user-info p {
+    font-size: 1.4em;
+  }
 
-    .user .user-city {
-        font-size: 1.1em;
-    }
+  .user .user-city {
+    font-size: 1.1em;
+  }
 }
